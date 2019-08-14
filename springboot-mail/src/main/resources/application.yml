@@ -1,0 +1,17 @@
+spring:
+  mail:
+    ##邮箱服务器地址
+    ##QQ smtp.qq.com
+    ##sina smtp.sina.cn
+    ##aliyun smtp.aliyun.com
+    ##163 smtp.163.com
+    host: smtp.qq.com
+    username: 251682553@qq.com
+    password: esgvjqzkmjuwbhab
+    default-encoding: utf-8
+server:
+  port: 8080
+main:
+  formMail:
+    sender: 251682553@qq.com
+    receiver: 1609543729@qq.com
