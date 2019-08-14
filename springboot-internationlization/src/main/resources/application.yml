@@ -1,0 +1,16 @@
+spring:
+  thymeleaf:
+    # 是否开启模板缓存，默认true
+    # 建议在开发时关闭缓存,不然没法看到实时页面
+    cache: false
+    ##去除thymeleaf的html严格校验
+    mode: LEGACYHTML5
+    # 模板编码
+    encoding: utf-8
+#    prefix: /templates/
+
+#  mvc:
+#    static-path-pattern: /static/**
+
+  messages:
+    basename: static/i18n/messages

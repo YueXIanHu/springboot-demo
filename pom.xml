@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.huzh</groupId>
+    <artifactId>springboot-demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <!--入门-->
+        <module>springboot-scheduled</module>
+        <module>springboot-validator</module>
+        <module>springboot-error</module>
+        <module>springboot-interceptor</module>
+        <module>springboot-cache</module>
+        <module>springboot-transactional</module>
+        <module>springboot-aop</module>
+        <module>springboot-xml</module>
+
+        <!--web-->
+        <module>springboot-thymeleaf</module>
+        <module>springboot-internationlization</module>
+
+        <!--数据库学习-->
+        <module>springboot-jpa</module>
+    </modules>
+</project>
