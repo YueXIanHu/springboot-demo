@@ -21,6 +21,8 @@
         <!--web-->
         <module>springboot-thymeleaf</module>
         <module>springboot-internationlization</module>
+        <module>springboot-mail</module>
+        <module>springboot-upload-download</module>
 
         <!--数据库学习-->
         <module>springboot-jpa</module>

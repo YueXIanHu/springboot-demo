@@ -26,6 +26,7 @@ public class CommonInterceptor extends HandlerInterceptorAdapter {
     //preHandle在业务处理器处理请求之前被调用，
     //postHandle在业务处理器处理请求执行完成后,生成视图之前执行
     //afterCompletion在DispatcherServlet完全处理完请求后被调用
+    @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
                            ModelAndView modelAndView) throws Exception {
         logger.info("请求ip：" + request.getRemoteAddr());
