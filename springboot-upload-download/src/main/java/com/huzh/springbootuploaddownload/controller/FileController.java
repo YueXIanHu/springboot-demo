@@ -82,9 +82,9 @@ public class FileController {
 
     @GetMapping("/download")
     public String downloadFile(HttpServletRequest request, HttpServletResponse response) {
-        String fileName = "test.jpeg";
+        String fileName = "123.jpg";
         if (fileName != null) {
-            File file = new File("D:/huzh/workspace/springboot_workspace/file/");
+            File file = new File("D:/huzh/workspace/springboot_workspace/file/1.jpg");
             if (file.exists()) {
                 // 设置强制下载不打开
                 response.setContentType("application/force-download");
@@ -95,11 +95,12 @@ public class FileController {
                 BufferedInputStream bis = null;
                 try {
                     fis = new FileInputStream(file);
-                    bis = new BufferedInputStream(bis);
+                    bis = new BufferedInputStream(fis);
                     OutputStream os = response.getOutputStream();
                     int i = bis.read(buffer);
                     while (i != -1) {
                         os.write(buffer, 0, i);
+                        i = bis.read(buffer);
                     }
                     return "下载成功";
                 } catch (Exception e) {
