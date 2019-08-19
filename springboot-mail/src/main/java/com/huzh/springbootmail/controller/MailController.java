@@ -105,7 +105,7 @@ public class MailController {
     public String sendHtmlTemplateMail() {
         //创建邮件正文
         Context context = new Context();
-        context.setVariable("id", "006");
+        context.setVariable("id", "ab0f14820b8d");
         String content = templateEngine.process("emailTemplate", context);
 
         MimeMessage message = javaMailSender.createMimeMessage();
