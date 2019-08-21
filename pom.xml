@@ -26,5 +26,6 @@
 
         <!--数据库学习-->
         <module>springboot-jpa</module>
+        <module>springboot-mybatis</module>
     </modules>
 </project>
