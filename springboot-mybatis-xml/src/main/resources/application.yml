@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=GMT
+mybatis:
+  #这个配置用来指定bean在哪个包里，避免存在同名class时找不到bean
+  type-aliases-package: com.huzh.springbootmybatisxml.model
+  ##检查 mybatis 配置是否存在，一般命名为 mybatis-config.xml
+  check-config-location: true
+  ##配置文件位置
+  config-location: classpath:mybatis/mybatis-config.xml
+  ## dao xml 文件地址
+  mapper-locations: classpath:mapper/*Mapper.xml
