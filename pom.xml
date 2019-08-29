@@ -28,5 +28,6 @@
         <module>springboot-jpa</module>
         <module>springboot-mybatis-annotation</module>
         <module>springboot-mybatis-xml</module>
+        <module>springboot-jpa-mulidatasource</module>
     </modules>
 </project>
