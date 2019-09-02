@@ -31,5 +31,6 @@
         <module>springboot-jpa-mulidatasource</module>
         <module>springboot-mybatis-mulidatasource</module>
         <module>springboot-swagger</module>
+        <module>springboot-druid</module>
     </modules>
 </project>

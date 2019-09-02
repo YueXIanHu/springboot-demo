@@ -1,7 +1,6 @@
 server:
   port: 8080
 spring:
-  #Êı¾İ¿âÅäÖÃ
   datasource:
     url: jdbc:mysql://localhost:3306/test?serverTimezone=GMT
     username: root
