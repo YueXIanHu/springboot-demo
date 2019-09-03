@@ -17,7 +17,7 @@ import javax.validation.constraints.NotNull;
  * @Version 1.0
  */
 @Entity
-@ApiModel(description = "user")
+@ApiModel(description = "用户实体")
 public class User {
 
     @ApiModelProperty(value = "主键id", hidden = true)
