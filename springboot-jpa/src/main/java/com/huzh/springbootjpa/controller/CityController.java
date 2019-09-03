@@ -3,6 +3,7 @@ package com.huzh.springbootjpa.controller;
 import com.huzh.springbootjpa.entity.City;
 import com.huzh.springbootjpa.repository.CityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -30,6 +31,7 @@ public class CityController {
 
     //http://localhost:8080/deleteCity?cityId=2
     @GetMapping(value = "deleteCity")
+    @Transactional
     public String deleteCity(String cityId) {
         cityRepository.deleteByCityId(cityId);
         return "success";
