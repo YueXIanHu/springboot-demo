@@ -32,5 +32,7 @@
         <module>springboot-mybatis-mulidatasource</module>
         <module>springboot-swagger</module>
         <module>springboot-druid</module>
+        <module>springboot-jdbctemplate</module>
+        <module>springboot-mybatis-plus</module>
     </modules>
 </project>
