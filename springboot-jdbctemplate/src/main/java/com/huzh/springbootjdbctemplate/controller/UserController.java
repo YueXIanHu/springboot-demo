@@ -23,7 +23,6 @@ public class UserController {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-
     //http://localhost:8080/createTable
     @GetMapping("createTable")
     public String createTable() {
@@ -66,7 +65,6 @@ public class UserController {
         int rows = jdbcTemplate.update("DELETE FROM  USER  WHERE ID = ?", id);
         return "执行成功，影响" + rows + "行";
     }
-
 
     //http://localhost:8080/batchSaveUserSql
     @GetMapping("batchSaveUserSql")
