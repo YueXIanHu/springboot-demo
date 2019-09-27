@@ -34,5 +34,7 @@
         <module>springboot-druid</module>
         <module>springboot-jdbctemplate</module>
         <module>springboot-mybatis-plus</module>
+        <module>springboot-mybatis-pagehelper</module>
+        <module>springboot-mybatis-generator</module>
     </modules>
 </project>
