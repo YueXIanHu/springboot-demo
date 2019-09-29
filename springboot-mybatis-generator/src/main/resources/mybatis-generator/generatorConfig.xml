@@ -2,11 +2,13 @@
 <!DOCTYPE generatorConfiguration
         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+        <!--使用最新版的MBG需要使用上面的xml头，配置文件必须包含上面的DOCTYPE。-->
 <!-- 配置生成器 -->
 <generatorConfiguration>
     <!--执行generator插件生成文件的命令： call mvn mybatis-generator:generate -e -->
     <!-- 引入配置文件 -->
     <properties resource="application.properties"/>
+
     <!--classPathEntry:数据库的JDBC驱动,换成你自己的驱动位置 可选 -->
     <!--<classPathEntry location="D:\generator_mybatis\mysql-connector-java-5.1.24-bin.jar" /> -->
 
@@ -16,18 +18,19 @@
         <!-- 自动识别数据库关键字，默认false，如果设置为true，根据SqlReservedWords中定义的关键字列表；
         一般保留默认值，遇到数据库关键字（Java关键字），使用columnOverride覆盖 -->
         <property name="autoDelimitKeywords" value="true"/>
-        <!-- 生成的Java文件的编码 -->
-        <property name="javaFileEncoding" value="utf-8"/>
         <!-- beginningDelimiter和endingDelimiter：指明数据库的用于标记数据库对象名的符号，比如ORACLE就是双引号，MYSQL默认是`反引号； -->
         <property name="beginningDelimiter" value="`"/>
         <property name="endingDelimiter" value="`"/>
 
+        <!-- 生成的Java文件的编码 -->
+        <property name="javaFileEncoding" value="utf-8"/>
         <!-- 格式化java代码 -->
         <property name="javaFormatter" value="org.mybatis.generator.api.dom.DefaultJavaFormatter"/>
         <!-- 格式化XML代码 -->
         <property name="xmlFormatter" value="org.mybatis.generator.api.dom.DefaultXmlFormatter"/>
-        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
 
+        <!--<plugin>元素用来定义一个插件。插件用于扩展或修改通过MyBatis Generator (MBG)代码生成器生成的代码。-->
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
         <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
 
         <!-- 注释 -->
@@ -41,6 +44,7 @@
                         connectionURL="${spring.datasource.url}"
                         userId="${spring.datasource.username}"
                         password="${spring.datasource.password}"/>
+
         <!-- 类型转换 -->
         <javaTypeResolver>
             <!-- 是否使用bigDecimal， false可自动转化以下类型（Long, Integer, Short, etc.） -->
@@ -53,12 +57,16 @@
             <property name="enableSubPackages" value="false"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
+
         <!-- 生成mapxml文件 -->
-        <sqlMapGenerator targetPackage="mapper" targetProject="${mybatis.resources}">
+        <sqlMapGenerator targetPackage="mapper"
+                         targetProject="${mybatis.resources}">
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
+
         <!-- 生成mapxml对应client，也就是接口dao -->
-        <javaClientGenerator targetPackage="com.huzh.springbootmybatisgenerator.dao" targetProject="${mybatis.project}"
+        <javaClientGenerator targetPackage="com.huzh.springbootmybatisgenerator.dao"
+                             targetProject="${mybatis.project}"
                              type="XMLMAPPER">
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
@@ -68,6 +76,7 @@
         <table tableName="user" domainObjectName="User"
                enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true"
                enableSelectByExample="true" selectByExampleQueryId="true">
+            <!--如果设置为true,那么MBG会使用从数据库元数据获取的列名作为生成的实体对象的属性。 如果为false(默认值)，MGB将会尝试将返回的名称转换为驼峰形式。-->
             <property name="useActualColumnNames" value="false"/>
             <!-- 数据库表主键 -->
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
