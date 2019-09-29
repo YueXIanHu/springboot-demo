@@ -36,5 +36,6 @@
         <module>springboot-mybatis-plus</module>
         <module>springboot-mybatis-pagehelper</module>
         <module>springboot-mybatis-generator</module>
+        <module>springboot-mybatis-mapper</module>
     </modules>
 </project>

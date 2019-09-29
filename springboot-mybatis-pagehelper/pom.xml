@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.huzh</groupId>
     <artifactId>springboot-mybatis-pagehelper</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <name>springboot-mybatis-pagehelper</name>
     <description>springboot-mybatis-pagehelper</description>
 

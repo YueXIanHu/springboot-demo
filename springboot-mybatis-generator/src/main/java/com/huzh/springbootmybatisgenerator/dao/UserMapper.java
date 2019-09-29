@@ -1,8 +1,11 @@
 package com.huzh.springbootmybatisgenerator.dao;
 
 import com.huzh.springbootmybatisgenerator.entity.User;
+import org.apache.ibatis.annotations.Mapper;
+
 import java.util.List;
 
+@Mapper
 public interface UserMapper {
     int deleteByPrimaryKey(Long id);
 
