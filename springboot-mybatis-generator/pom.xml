@@ -15,6 +15,8 @@
     <description>springboot-mybatis-generator</description>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <mybatis.version>2.1.0</mybatis.version>
         <mybatis.pagehelper.version>1.2.5</mybatis.pagehelper.version>
