@@ -1,0 +1,25 @@
+info:
+  app:
+    name: spring-boot-actuator-test
+    version: 1.0.0
+    test: test
+
+management:
+  endpoints:
+    web:
+      #Actuator 默认所有的监控点路径都在/actuator/*，当然如果有需要这个路径也支持定制。
+      base-path: /monitor
+      #Actuator 只开放了两个端点 /actuator/health 和 /actuator/info
+      #打开所有的监控点
+      exposure:
+        include: '*'
+
+  endpoint:
+    health:
+      show-details: always
+
+  health:
+    #可以在配置文件中关闭特定的健康检查指标，比如关闭 redis 的健康检查(或者MongoDB)
+    redis:
+      enabled: false
+
