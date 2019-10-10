@@ -8,7 +8,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <!--入门-->
+        <!--入门项目-->
         <module>springboot-scheduled</module>
         <module>springboot-validator</module>
         <module>springboot-error</module>
@@ -18,13 +18,13 @@
         <module>springboot-aop</module>
         <module>springboot-xml</module>
 
-        <!--web-->
+        <!--web项目-->
         <module>springboot-thymeleaf</module>
         <module>springboot-internationlization</module>
         <module>springboot-mail</module>
         <module>springboot-upload-download</module>
 
-        <!--数据库学习-->
+        <!--数据库项目-->
         <module>springboot-jpa</module>
         <module>springboot-mybatis-annotation</module>
         <module>springboot-mybatis-xml</module>
@@ -38,10 +38,11 @@
         <module>springboot-mybatis-generator</module>
         <module>springboot-mybatis-mapper</module>
 
-        <!--日志-->
+        <!--日志项目-->
         <module>springboot-logback</module>
         <module>springboot-log4j2</module>
 
+        <!--监控项目-->
         <module>springboot-actuator</module>
         <module>springboot-admin-server</module>
         <module>springboot-admin-client</module>
