@@ -10,6 +10,7 @@
     <properties resource="application.properties"/>
 
     <!--classPathEntry:数据库的JDBC驱动,换成你自己的驱动位置 可选 -->
+    <!--maven中添加过依赖，此处可省略-->
     <!--<classPathEntry location="D:\generator_mybatis\mysql-connector-java-5.1.24-bin.jar" /> -->
 
     <!-- 一个数据库一个context -->
@@ -43,7 +44,10 @@
         <jdbcConnection driverClass="${spring.datasource.driver-class-name}"
                         connectionURL="${spring.datasource.url}"
                         userId="${spring.datasource.username}"
-                        password="${spring.datasource.password}"/>
+                        password="${spring.datasource.password}">
+            <!--如果驱动使用的是Connector / J的8.x版，即maven中配置的或者上面引入的。需要添加下面属性，其他版本可以省略-->
+            <property name="nullCatalogMeansCurrent" value="true"/>
+        </jdbcConnection>
 
         <!-- 类型转换 -->
         <javaTypeResolver>

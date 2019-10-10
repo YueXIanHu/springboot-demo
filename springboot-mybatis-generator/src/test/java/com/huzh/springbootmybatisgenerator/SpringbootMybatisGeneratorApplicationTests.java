@@ -1,6 +1,10 @@
 package com.huzh.springbootmybatisgenerator;
 
+
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.huzh.springbootmybatisgenerator.dao.UserMapper;
+import com.huzh.springbootmybatisgenerator.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +20,10 @@ public class SpringbootMybatisGeneratorApplicationTests {
 
     @Test
     public void contextLoads() {
-        System.out.println(userMapper.selectAll());
+        System.out.println("====================");
+        PageHelper.startPage(1, 2);
+        Page<User> userList = userMapper.selectAll();
+        System.out.println(userList);
     }
 
 }

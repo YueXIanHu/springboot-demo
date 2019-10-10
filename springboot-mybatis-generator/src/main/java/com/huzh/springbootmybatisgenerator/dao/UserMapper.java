@@ -1,5 +1,6 @@
 package com.huzh.springbootmybatisgenerator.dao;
 
+import com.github.pagehelper.Page;
 import com.huzh.springbootmybatisgenerator.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -13,7 +14,7 @@ public interface UserMapper {
 
     User selectByPrimaryKey(Long id);
 
-    List<User> selectAll();
+    Page<User> selectAll();
 
     int updateByPrimaryKey(User record);
 }
