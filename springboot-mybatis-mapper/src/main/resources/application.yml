@@ -5,8 +5,11 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
+
 mapper:
   mappers:
-      - tk.mybatis.mapper.common.Mapper
-      - com.huzh.springbootmybatismapper.common.CommonMapper
-  not-empty: true
+      - tk.mybatis.mapper.common.Mapper #mapper的父接口
+      - com.huzh.springbootmybatismapper.common.CommonMapper #自定义mapper的父接口
+  not-empty: true  #insert和update中，是否判断字符串类型!=''，少数方法会用到
+  identity: mysql
+  enum-as-simple-type: true  # 允许bean 接受 enum 类型

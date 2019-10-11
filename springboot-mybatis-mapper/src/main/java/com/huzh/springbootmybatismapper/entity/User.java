@@ -3,6 +3,8 @@ package com.huzh.springbootmybatismapper.entity;
 import lombok.Data;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Transient;
 
 /**
  * @ClassName User
@@ -15,8 +17,12 @@ import javax.persistence.Entity;
 @Data
 public class User {
 
-    private Long id;
+    @Id
+    private Integer id;
     private String name;
     private Integer age;
     private String email;
+
+    @Transient
+    private String otherThings; //非数据库表中字段
 }

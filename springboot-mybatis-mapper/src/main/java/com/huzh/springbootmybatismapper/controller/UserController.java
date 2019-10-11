@@ -22,7 +22,19 @@ public class UserController {
     private UserMapper userMapper;
 
     @RequestMapping("/selectAll")
-    public List<User> selectAll(){
-        return userMapper.selectAll();
+    public String selectAll() {
+        User user = userMapper.selectByPrimaryKey("1");
+        System.out.println("================>" + user);
+
+        List<User> userList = userMapper.selectAll();
+        System.out.println("================>" + userList);
+
+        //使用对象传参，适用于1个字段或者多个字段联合主键使用
+        User user1 = new User();
+        user1.setId(1);
+        User user2 = userMapper.selectByPrimaryKey(user1);
+        System.out.println("================>" + user2);
+
+        return "success";
     }
 }

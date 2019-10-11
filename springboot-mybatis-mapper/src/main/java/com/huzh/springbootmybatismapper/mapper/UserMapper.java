@@ -1,8 +1,7 @@
 package com.huzh.springbootmybatismapper.mapper;
 
-import com.huzh.springbootmybatismapper.entity.User;
 import com.huzh.springbootmybatismapper.common.CommonMapper;
-import org.apache.ibatis.annotations.Mapper;
+import com.huzh.springbootmybatismapper.entity.User;
 
 /**
  * @ClassName UserMapper
@@ -11,6 +10,5 @@ import org.apache.ibatis.annotations.Mapper;
  * @Author huzh
  * @Version 1.0
  */
-@Mapper
 public interface UserMapper extends CommonMapper<User> {
 }
