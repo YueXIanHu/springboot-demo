@@ -4,7 +4,7 @@
     <contextName>SpringBoot-logback</contextName>
     <!--设置系统日志目录-->
     <property name="log-dir" value="logs"/>
-    <property name="log-name" value="logFile"/>
+    <property name="log-name" value="spring-boot-logback"/>
 
     <!-- 控制台输出 -->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
