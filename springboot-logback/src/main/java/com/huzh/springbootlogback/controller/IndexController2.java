@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class IndexController2 {
 
     @RequestMapping("/index2")
-    public String index() {
+    public String index2() {
         log.trace("记录trace日志");
         log.debug("记录debug日志");
         log.info("访问了index方法");
