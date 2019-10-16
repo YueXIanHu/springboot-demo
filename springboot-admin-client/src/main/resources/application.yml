@@ -6,6 +6,8 @@ spring:
     admin:
       client:
         url: http://localhost:8080
+        instance:
+          name: ReactiveCrud
 
 info:
   name: spring-boot-actuator-test
