@@ -1,0 +1,26 @@
+spring:
+  #数据库配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=GMT
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+  #jpa配置
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  thymeleaf:
+    # 是否开启模板缓存，默认true
+    # 建议在开发时关闭缓存,不然没法看到实时页面
+    cache: false
+    ##去除thymeleaf的html严格校验
+    mode: LEGACYHTML5
+    # 模板编码
+    encoding: utf-8
+
+#端口号
+server:
+  port: 8080

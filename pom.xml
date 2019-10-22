@@ -46,5 +46,8 @@
         <module>springboot-actuator</module>
         <module>springboot-admin-server</module>
         <module>springboot-admin-client</module>
+
+        <!--安全项目-->
+        <module>springboot-shiro</module>
     </modules>
 </project>
