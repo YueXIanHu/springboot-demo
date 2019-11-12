@@ -42,6 +42,13 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!--shiro-->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+
         <!--thymeleaf-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -55,24 +62,11 @@
             <version>${nekohtml.version}</version>
         </dependency>
 
-        <!--lombok-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-
         <!-- 调试热启动 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-spring</artifactId>
-            <version>${shiro.version}</version>
         </dependency>
 
         <dependency>

@@ -29,7 +29,7 @@
         <module>springboot-mybatis-annotation</module>
         <module>springboot-mybatis-xml</module>
         <module>springboot-jpa-mulidatasource</module>
-        <module>springboot-mybatis-mulidatasource</module>
+        <!--<module>springboot-mybatis-mulidatasource</module>-->
         <module>springboot-swagger</module>
         <module>springboot-druid</module>
         <module>springboot-jdbctemplate</module>
