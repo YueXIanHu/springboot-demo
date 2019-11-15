@@ -10,7 +10,7 @@ import org.springframework.data.repository.CrudRepository;
  * @Author huzh
  * @Version 1.0
  */
-public interface UserRepository extends CrudRepository<SysUser, Integer> {
+public interface UserRepository extends CrudRepository<SysUser, String> {
 
     //通过username查找用户信息;
     SysUser findByUserName(String username);
