@@ -49,5 +49,8 @@
 
         <!--安全项目-->
         <module>springboot-shiro</module>
+
+        <!--中间件-->
+        <module>springboot-rabbitmq</module>
     </modules>
 </project>
