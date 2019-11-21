@@ -1,4 +1,4 @@
-package com.huzh.springbootrabbitmq.config;
+package com.huzh.springbootrabbitmq.rabbit;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;

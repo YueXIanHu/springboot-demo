@@ -1,4 +1,4 @@
-package com.huzh.springbootrabbitmq.sender;
+package com.huzh.springbootrabbitmq.rabbit.object;
 
 import com.huzh.springbootrabbitmq.entity.User;
 import org.springframework.amqp.core.AmqpTemplate;

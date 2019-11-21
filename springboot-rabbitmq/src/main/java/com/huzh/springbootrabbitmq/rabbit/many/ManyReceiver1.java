@@ -1,25 +1,22 @@
-package com.huzh.springbootrabbitmq.receiver;
+package com.huzh.springbootrabbitmq.rabbit.many;
 
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 /**
- * @ClassName TopicReceiver1
+ * @ClassName Receiver
  * @Description TODO
- * @Date 2019/11/20 16:56
+ * @Date 2019/11/20 14:55
  * @Author huzh
  * @Version 1.0
  */
 @Component
-@RabbitListener(queues = "topic.message")
-public class TopicReceiver1 {
+@RabbitListener(queues = "manyQueue")
+public class ManyReceiver1 {
 
     @RabbitHandler
-    public void process(String message){
-
-        System.out.println("Receiver topic.message :"+ message);
-
+    public void process(String Str) {
+        System.out.println("Receiver1：" + Str);
     }
-
 }

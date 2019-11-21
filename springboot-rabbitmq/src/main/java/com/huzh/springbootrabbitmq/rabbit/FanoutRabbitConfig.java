@@ -1,4 +1,4 @@
-package com.huzh.springbootrabbitmq.config;
+package com.huzh.springbootrabbitmq.rabbit;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
  * @Version 1.0
  */
 @Configuration
-public class FanOutRabbitConfig {
+public class FanoutRabbitConfig {
 
     //创建三个队列
     @Bean

@@ -1,10 +1,13 @@
 package com.huzh.springbootrabbitmq.controller;
 
 import com.huzh.springbootrabbitmq.entity.User;
-import com.huzh.springbootrabbitmq.sender.FanoutSender;
-import com.huzh.springbootrabbitmq.sender.ObjectSender;
-import com.huzh.springbootrabbitmq.sender.Sender;
-import com.huzh.springbootrabbitmq.sender.TopicSender;
+import com.huzh.springbootrabbitmq.rabbit.many.ManySender1;
+import com.huzh.springbootrabbitmq.rabbit.many.ManySender2;
+import com.huzh.springbootrabbitmq.rabbit.one.OneSender;
+import com.huzh.springbootrabbitmq.rabbit.fanout.FanoutSender;
+import com.huzh.springbootrabbitmq.rabbit.object.ObjectSender;
+import com.huzh.springbootrabbitmq.rabbit.hello.HelloSender;
+import com.huzh.springbootrabbitmq.rabbit.topic.TopicSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,10 +23,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @Autowired
-    private Sender sender;
+    private HelloSender helloSender;
 
     @Autowired
-    private Sender sender1;
+    private OneSender oneSender;
+
+    @Autowired
+    private ManySender1 manySender1;
+    @Autowired
+    private ManySender2 manySender2;
 
     @Autowired
     private ObjectSender objectSender;
@@ -36,14 +44,14 @@ public class TestController {
 
     @GetMapping("hello")
     public String helloTest() {
-        sender.send();
+        helloSender.send();
         return "success";
     }
 
     @GetMapping("oneToMany")
     public String oneToManyTest() {
         for (int i = 0; i < 10; i++) {
-            sender.send2(i);
+            oneSender.send(i);
         }
         return "success";
     }
@@ -51,8 +59,8 @@ public class TestController {
     @GetMapping("manyToMany")
     public String manyToManyTest() {
         for (int i = 0; i < 10; i++) {
-            sender.send2(i);
-            sender1.send2(i);
+            manySender1.send(i);
+            manySender2.send(i);
         }
         return "success";
     }

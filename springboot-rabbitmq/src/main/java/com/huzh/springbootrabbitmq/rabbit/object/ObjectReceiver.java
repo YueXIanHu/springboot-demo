@@ -1,4 +1,4 @@
-package com.huzh.springbootrabbitmq.receiver;
+package com.huzh.springbootrabbitmq.rabbit.object;
 
 import com.huzh.springbootrabbitmq.entity.User;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;

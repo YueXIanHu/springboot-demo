@@ -1,4 +1,4 @@
-package com.huzh.springbootrabbitmq.receiver;
+package com.huzh.springbootrabbitmq.rabbit.many;
 
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -12,8 +12,8 @@ import org.springframework.stereotype.Component;
  * @Version 1.0
  */
 @Component
-@RabbitListener(queues = "message2")
-public class Receiver2 {
+@RabbitListener(queues = "manyQueue")
+public class ManyReceiver2 {
 
     @RabbitHandler
     public void process(String Str) {

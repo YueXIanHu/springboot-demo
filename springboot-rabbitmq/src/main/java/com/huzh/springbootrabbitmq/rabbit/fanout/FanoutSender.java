@@ -1,4 +1,4 @@
-package com.huzh.springbootrabbitmq.sender;
+package com.huzh.springbootrabbitmq.rabbit.fanout;
 
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;

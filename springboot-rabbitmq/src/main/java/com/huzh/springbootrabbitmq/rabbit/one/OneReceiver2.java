@@ -1,4 +1,4 @@
-package com.huzh.springbootrabbitmq.receiver;
+package com.huzh.springbootrabbitmq.rabbit.one;
 
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -12,11 +12,11 @@ import org.springframework.stereotype.Component;
  * @Version 1.0
  */
 @Component
-@RabbitListener(queues = "message")
-public class Receiver {
+@RabbitListener(queues = "OTM")
+public class OneReceiver2 {
 
     @RabbitHandler
     public void process(String Str) {
-        System.out.println("Receiver: " + Str);
+        System.out.println("Receiver2：" + Str);
     }
 }

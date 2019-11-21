@@ -1,4 +1,4 @@
-package com.huzh.springbootrabbitmq.config;
+package com.huzh.springbootrabbitmq.rabbit;
 
 import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
@@ -15,13 +15,17 @@ import org.springframework.context.annotation.Configuration;
 public class RabbitConfig {
 
     @Bean
-    public Queue Queue() {
-        return new Queue("message");
+    public Queue helloQueue() {
+        return new Queue("hello");
+    }
+    @Bean
+    public Queue OTM() {
+        return new Queue("OTM");
     }
 
     @Bean
-    public Queue Queue2() {
-        return new Queue("message2");
+    public Queue manyQueue() {
+        return new Queue("manyQueue");
     }
 
     @Bean
