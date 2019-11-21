@@ -52,5 +52,6 @@
 
         <!--中间件-->
         <module>springboot-rabbitmq</module>
+        <module>springboot-redis</module>
     </modules>
 </project>
