@@ -53,5 +53,6 @@
         <!--中间件-->
         <module>springboot-rabbitmq</module>
         <module>springboot-redis</module>
+        <module>springboot-mongodb</module>
     </modules>
 </project>
