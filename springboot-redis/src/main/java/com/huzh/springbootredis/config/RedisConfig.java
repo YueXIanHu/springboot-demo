@@ -33,17 +33,17 @@ public class RedisConfig extends CachingConfigurerSupport {
         return cacheManager;
     }
 
-//    @Bean
-//    public RedisTemplate<String, Serializable> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
-//        RedisTemplate<String, Serializable> redisTemplate = new RedisTemplate<>();
-//        redisTemplate.setConnectionFactory(redisConnectionFactory);
-//        // key序列化
-//        redisTemplate.setKeySerializer(new StringRedisSerializer());
-//        // value序列化
-//        redisTemplate.setValueSerializer(new GenericJackson2JsonRedisSerializer());
-//        redisTemplate.afterPropertiesSet();
-//        return redisTemplate;
-//    }
+    @Bean
+    public RedisTemplate<String, Serializable> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
+        RedisTemplate<String, Serializable> redisTemplate = new RedisTemplate<>();
+        redisTemplate.setConnectionFactory(redisConnectionFactory);
+        // key序列化
+        redisTemplate.setKeySerializer(new StringRedisSerializer());
+        // value序列化
+        redisTemplate.setValueSerializer(new GenericJackson2JsonRedisSerializer());
+        redisTemplate.afterPropertiesSet();
+        return redisTemplate;
+    }
 
 
 }

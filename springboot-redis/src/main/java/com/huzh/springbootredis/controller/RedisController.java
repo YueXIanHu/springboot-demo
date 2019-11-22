@@ -1,12 +1,11 @@
 package com.huzh.springbootredis.controller;
 
 import com.huzh.springbootredis.entity.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,11 +19,9 @@ import java.util.List;
 @RestController
 public class RedisController {
 
-    @Resource
-    RedisTemplate<String,Serializable>  redisTemplate;
 
-//    @Autowired
-//    private RedisTemplate redisTemplate;
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     @RequestMapping("/set")
     public String HelloSpring(String key, String value) {
@@ -41,7 +38,7 @@ public class RedisController {
     @RequestMapping("/setUser")
     public String setUser() {
         User user = new User();
-        user.setName("admin12");
+        user.setName("admin");
         user.setAge(22);
         List<String> list = new ArrayList<>();
         list.add("小学");
