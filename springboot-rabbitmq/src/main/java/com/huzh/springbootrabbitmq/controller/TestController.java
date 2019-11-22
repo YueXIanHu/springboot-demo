@@ -74,8 +74,8 @@ public class TestController {
 
     @GetMapping("topicSender")
     public String topicSenderTest() {
-//        topicSender.send1();
-        topicSender.send2();
+        topicSender.send1();
+//        topicSender.send2();
         return "success";
     }
 

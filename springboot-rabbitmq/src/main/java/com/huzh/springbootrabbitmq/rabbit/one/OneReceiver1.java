@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  * @Version 1.0
  */
 @Component
-@RabbitListener(queues = "OTM")
+@RabbitListener(queues = "oneQueue")
 public class OneReceiver1 {
 
     @RabbitHandler

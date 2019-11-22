@@ -18,8 +18,8 @@ public class OneSender {
     private AmqpTemplate amqpTemplate;
 
     public void send(int i) {
-        String context = "spirng boot OTM queue"+" ****** "+i;
+        String context = "spirng boot oneQueue queue"+" ****** "+i;
         System.out.println("Sender1" + context);
-        this.amqpTemplate.convertAndSend("OTM", context);
+        this.amqpTemplate.convertAndSend("oneQueue", context);
     }
 }

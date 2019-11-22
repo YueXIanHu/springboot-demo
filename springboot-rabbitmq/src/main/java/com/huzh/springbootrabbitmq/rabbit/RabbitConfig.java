@@ -19,8 +19,8 @@ public class RabbitConfig {
         return new Queue("hello");
     }
     @Bean
-    public Queue OTM() {
-        return new Queue("OTM");
+    public Queue oneQueue() {
+        return new Queue("oneQueue");
     }
 
     @Bean
