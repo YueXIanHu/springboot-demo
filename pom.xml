@@ -30,6 +30,7 @@
         <module>springboot-mybatis-xml</module>
         <module>springboot-jpa-mulidatasource</module>
         <module>springboot-mybatis-dynamic-datasource</module>
+        <module>springboot-mybatis-dynamic-datasource2</module>
         <module>springboot-swagger</module>
         <module>springboot-druid</module>
         <module>springboot-jdbctemplate</module>
