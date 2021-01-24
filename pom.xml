@@ -55,6 +55,7 @@
         <module>springboot-rabbitmq</module>
         <module>springboot-redis</module>
         <module>springboot-mongodb</module>
+        <module>springboot-kafka</module>
 
         <module>springboot-jwt</module>
     </modules>
