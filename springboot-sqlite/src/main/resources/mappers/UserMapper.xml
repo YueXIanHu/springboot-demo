@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springbootsqlite.mapper.UserMapper">
+    <select id="selectList" resultType="com.example.springbootsqlite.entity.User">
+        select * from t_user
+    </select>
+
+    <select id="selectCount" resultType="Long">
+        select count(*) from t_user
+    </select>
+
+    <insert id="insert">
+        insert into t_user(uid,name,sex,email)
+        values (#{uid},#{name},#{sex},#{email})
+    </insert>
+</mapper>
